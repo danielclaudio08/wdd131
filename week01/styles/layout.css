@@ -9,15 +9,15 @@ body {
   background-color: #333333;
   line-height: 1.6;
   display: grid;
-  grid-template-rows: auto 1fr auto; /* Header, main, footer */
-  grid-template-columns: 1fr; /* Single column layout */
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
   min-height: 100vh;
 }
 
 .container {
-  max-width: 1200px; /* Set consistent max-width for header, nav, and footer */
-  margin: 0 auto; /* Centers content horizontally */
-  width: 100%; /* Allows responsiveness */
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 header {
