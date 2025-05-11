@@ -1,0 +1,167 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  max-width: 1200px;
+  background-color: #f4f4f4;
+}
+
+header {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  background-color: #064c87;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  color: white;
+}
+
+h2, h3 {
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  font-family: 'Roboto', sans-serif;
+  background-color: #333;
+  color: white;
+  justify-content: space-around;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+  color: #064c87;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  text-decoration: none;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  display: flex;
+  justify-content: center;
+  background-color: #064c87;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+}
+
+.card-body.reverse {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+h3 {
+  grid-column: 1 / -1;
+  text-align: center;
+  border-bottom: 1px solid #080404;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.card-image {
+  text-align: center;
+}
+
+.card-image img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.card-image p {
+  font-size: 0.9rem;
+  color: #000000;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.card-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+  position: relative;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+ul li a {
+  color: #064c87;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  background-color: #064c87;
+  color: #ffff;
+  text-align: center;
+  padding: 2px;
+  margin-top: 5px;
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
