@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
+  background: #f7f6fa;
+  color: #222;
+}
+
+header {
+  background: #4B006E;
+  color: #fff;
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.logo {
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: 'Roboto', sans-serif;
+}
+
+#menu {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 2;
+}
+
+nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  background: #4B006E;
+  width: 100%;
+}
+
+nav.open {
+  display: block;
+}
+
+.navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation li {
+  border-bottom: 1px solid #fff2;
+}
+
+.navigation li:last-child {
+  border-bottom: none;
+}
+
+.navigation a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navigation a:hover,
+.navigation .active a {
+  background: #fff;
+  color: #4B006E;
+}
+
+main {
+  max-width: 100%;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px #0001;
+}
+
+main h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  justify-items: center;
+}
+
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px #0002;
+  background: #eee;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: #4B006E;
+}
+
+footer {
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+  background: #4B006E;
+  padding: 0.5rem;
+  margin-bottom: 0;
+}

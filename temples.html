@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Album</title>
+  <meta name="description" content="Picture Album. This is about various temples around the world.">
+  <meta name="author" content="Daniel Claudio">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/temple.css">
+  <link rel="stylesheet" href="styles/temple-large.css">
+  <script src="scripts/temple.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <span class="logo">Temple Album</span>
+      <button id="menu" aria-label="Open navigation"></button>
+      <nav>
+        <ul class="navigation">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Old</a></li>
+          <li><a href="#">New</a></li>
+          <li><a href="#">Large</a></li>
+          <li><a href="#">Small</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <h1>Home</h1>
+    <div class="gallery">
+      <figure>
+        <img src="images/salt-lake-temple.jpg" alt="Salt Lake Temple" width="300" height="200">
+        <figcaption>Salt Lake Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/laie-hawaii-temple.jpg" alt="Laie Hawaii Temple" width="300" height="200">
+        <figcaption>Laie Hawaii Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/london-england-temple.jpg" alt="London England Temple" width="300" height="200">
+        <figcaption>London England Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/san-diego-temple.jpg" alt="San Diego California Temple" width="300" height="200">
+        <figcaption>San Diego California Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/rome-italy-temple.jpg" alt="Rome Italy Temple" width="300" height="200">
+        <figcaption>Rome Italy Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/provo-city-center-temple.jpg" alt="Provo City Center Temple" width="300" height="200">
+        <figcaption>Provo City Center Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/bern-switzerland-temple.jpg" alt="Bern Switzerland Temple" width="300" height="200">
+        <figcaption>Bern Switzerland Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/curitiba-brazil-temple.jpg" alt="Curitiba Brazil Temple" width="300" height="200">
+        <figcaption>Curitiba Brazil Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/tokyo-japan-temple.jpg" alt="Tokyo Japan Temple" width="300" height="200">
+        <figcaption>Tokyo Japan Temple</figcaption>
+      </figure>
+    </div>
+  </main>
+  <footer>
+    <p>
+      &copy; <span id="currentyear"></span> | Daniel Claudio | Philippines
+    </p>
+    <p id="lastModified"></p>
+  </footer>
+
+</body>
+
+</html>
