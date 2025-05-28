@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Page</title>
+  <meta name="description" content="Philippines by Daniel Claudio">
+  <meta name="author" content="Daniel Claudio">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+  <Main>
+    <section class="hero">
+      <h1>Philippines <span class="subtitle">-Pearl of the Orient Seas</span></h1>
+      <picture>
+        <source srcset="images/mayon-volcano-large.webp" media="(min-width: 1000px)">
+        <img src="images/philippine-eagle-small.webp" alt="Philippines: Mayon Volcano and National Bird" width="600"
+          height="700">
+      </picture>
+    </section>
+    <section class="data">
+      <h2>Data</h2>
+      <ul>
+        <li><strong>Area:</strong> 300,000 km²</li>
+        <li><strong>Population:</strong> 113,880,000</li>
+        <li><strong>Capital:</strong> Manila</li>
+        <li><strong>Official Languages:</strong> Filipino, English</li>
+        <li><strong>Currency:</strong> Philippine Peso (PHP)</li>
+        <li><strong>Time Zone:</strong> UTC+8</li>
+        <li><strong>Calling Code:</strong> +63</li>
+        <li><strong>Internet TLD:</strong> .ph</li>
+      </ul>
+    </section>
+    <section class="weather">
+      <h2>Weather <span class="emoji">⛅</span></h2>
+      <div class="svg-icon">
+        <img src="images/weather.svg" alt="Weather Icon" width="24" height="24">
+      </div>
+      <p><strong>Temperature:</strong> 31 &deg;C</p>
+      <p><strong>Conditions:</strong> Mostly Cloudy</p>
+      <p><strong>Wind:</strong> 15 km/h</p>
+      <p><strong>Wind Chill:</strong> 33 &deg;C</p>
+    </section>
+  </Main>
+  <footer>
+    <p>
+      &copy; <span id="currentyear"></span> | Daniel Claudio | Philippines
+    </p>
+    <p id="lastModification"></p>
+  </footer>
+</body>
+
+</html>
