@@ -75,14 +75,14 @@ h1 .subtitle {
 }
 
 .data {
-  top: 16rem;
+  top: 20rem;
   left: 2rem;
   z-index: 2;
   border-left: 20px solid var(--philippines-color);
 }
 
 .weather {
-  bottom: 2rem;
+  bottom: -3rem;
   right: 2rem;
   border-left: 20px solid var(--philippines-color);
 }
@@ -238,6 +238,31 @@ footer {
       .svg-icon {
         display: none;
       }
+    }
+  }
+
+  .marquee-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 2.5em;
+  }
+
+  .marquee-text {
+    position: absolute;
+    white-space: nowrap;
+    animation: marquee-move 10s linear infinite alternate;
+    left: 0;
+  }
+
+  @keyframes marquee-move {
+    from {
+      left: 0;
+    }
+
+    to {
+      left: calc(100% - 100%);
+      transform: translateX(calc(100vw - 100%));
     }
   }
 
