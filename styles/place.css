@@ -99,25 +99,20 @@ h1 .subtitle {
   color: var(--philippines-dark-blue);
 }
 
-.weather-icon {
-  font-size: 1.5rem;
+.weather-svg {
+  display: flex;
+  align-items: center;
 }
 
 .emoji {
   display: none;
-  margin-left: 1rem;
 }
 
-.mobile-weather-icon {
-  display: inline;
-}
-
-.weather-icon::after {
+.weather-svg::after {
   content: "";
   font-size: 1.5rem;
   margin-left: 0.5rem;
 }
-
 
 .data ul {
   list-style-type: none;
@@ -173,7 +168,7 @@ footer {
     text-align: center;
   }
 
-  .weather .svg-icon {
+  .weather .weather-svg {
     display: flex;
     justify-content: center;
   }
@@ -207,7 +202,7 @@ footer {
     margin: 1rem auto;
   }
 
-  .weather .svg-icon {
+  .weather .weather-svg {
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
@@ -218,52 +213,40 @@ footer {
   .page-title {
     font-size: 2.2rem;
   }
+}
 
-  @media (min-width: 768px) {
-    .mobile-weather-icon {
-      display: none;
-    }
-
-    .weather-icon::after {
-      content: "⛅";
-      font-size: 1.5rem;
-      margin-left: 0.5rem;
-    }
-
-    @media screen and (min-width: 768px) {
-      .emoji {
-        display: inline;
-      }
-
-      .svg-icon {
-        display: none;
-      }
-    }
+@media (min-width: 768px) {
+  .weather h2::after {
+    content: " ⛅";
+    font-size: 1.5rem;
   }
 
-  .marquee-container {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: 2.5em;
+  .weather-svg {
+    display: none;
   }
+}
 
-  .marquee-text {
-    position: absolute;
-    white-space: nowrap;
-    animation: marquee-move 10s linear infinite alternate;
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 2.5em;
+}
+
+.marquee-text {
+  position: absolute;
+  white-space: nowrap;
+  animation: marquee-move 10s linear infinite alternate;
+  left: 0;
+}
+
+@keyframes marquee-move {
+  from {
     left: 0;
   }
 
-  @keyframes marquee-move {
-    from {
-      left: 0;
-    }
-
-    to {
-      left: calc(100% - 100%);
-      transform: translateX(calc(100vw - 100%));
-    }
+  to {
+    left: calc(100% - 100%);
+    transform: translateX(calc(100vw - 100%));
   }
-
 }
