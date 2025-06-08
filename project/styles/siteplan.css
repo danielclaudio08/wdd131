@@ -1,0 +1,88 @@
+body {
+  background: #E5E5E5;
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  ;
+}
+
+header {
+  background: #FCA311;
+  color: #000000;
+  padding: 2rem 1rem 1rem 1rem;
+  text-align: center;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+h1,
+h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+.site-desc,
+.domain {
+  font-size: 16px;
+  margin: 0.2rem 0;
+}
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  background: #ADB5BD;
+  color: #000000;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+section:last-of-type {
+  text-align: center;
+}
+
+.color-sample {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 4px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.color-sample.primary {
+  background: #FCA311;
+  color: #000000;
+}
+
+.color-sample.accent {
+  color: #000000;
+}
+
+.color-sample.accent:hover {
+  color: #390099;
+}
+
+.wireframes {
+  display: flex;
+  flex-direction: column;
+}
+
+.wireframes figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #000000;
+}
