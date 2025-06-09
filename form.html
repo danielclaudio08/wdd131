@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review Form</title>
+  <meta name="description"
+    content="A simple product review form that allows users to submit their reviews and ratings.">
+  <meta name="author" content="Daniel Claudio">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Product Review Form</h1>
+  </header>
+  <main>
+    <form method="get" action="review.html" autocomplete="on">
+      <fieldset>
+        <label for="productName">Product Name
+          <select id="productName" name="productName" required>
+            <option value="" disabled selected>Select a Product ...</option>
+          </select>
+        </label>
+        <fieldset>
+          <legend>Overall Rating</legend>
+          <div class="rating-group">
+            <label for="onestar">
+              <input type="radio" id="onestar" name="stars" value="1" required>
+              &star;
+            </label>
+            <label for="twostar">
+              <input type="radio" id="twostar" name="stars" value="2">
+              &star;&star;
+            </label>
+            <label for="threestar">
+              <input type="radio" id="threestar" name="stars" value="3">
+              &star;&star;&star;
+            </label>
+            <label for="fourstar">
+              <input type="radio" id="fourstar" name="stars" value="4">
+              &star;&star;&star;&star;
+            </label>
+            <label for="fivestar">
+              <input type="radio" id="fivestar" name="stars" value="5">
+              &star;&star;&star;&star;&star;
+            </label>
+          </div>
+        </fieldset>
+        <label for="installDate">Date of Installation
+          <input type="date" id="installDate" name="installDate" required>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Which features did you find useful in the product? (check all that apply)</legend>
+        <div class="features">
+          <label for="featureDurability">
+            <input type="checkbox" id="featureDurability" name="features" value="Durability">
+            Durability
+          </label>
+          <label for="featureEaseOfUse">
+            <input type="checkbox" id="featureEaseOfUse" name="features" value="Ease of Use">
+            Ease of Use
+          </label>
+          <label for="featurePerformance">
+            <input type="checkbox" id="featurePerformance" name="features" value="Performance">
+            Performance
+          </label>
+          <label for="featureDesign">
+            <input type="checkbox" id="featureDesign" name="features" value="Design">
+            Design
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <label for="writtenReview">
+          <span>Written Review <span class="optionalReview">(optional)</span></span>
+          <textarea id="writtenReview" name="writtenReview" placeholder="Write your review here..."></textarea>
+        </label>
+        <label for="userName">
+          <span>Your Name <span class="optionalReview">(optional)</span></span>
+          <input type="text" id="userName" name="userName" placeholder="Enter your name" autocomplete="name">
+        </label>
+      </fieldset>
+
+      <input type="submit" value="Post Review">
+    </form>
+  </main>
+  <footer>
+    <p>
+      &copy; <span id="currentyear"></span> | Daniel Claudio | Philippines
+    </p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+
+</html>
