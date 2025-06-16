@@ -1,0 +1,700 @@
+/* === RESET & BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #E5E5E5;
+  color: #000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === HEADER === */
+header {
+  background: #FCA311;
+  text-align: center;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 2px 8px #39009922;
+  padding: 2rem;
+}
+
+.logo img {
+  display: block;
+  max-width: 120px;
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: #000000;
+  text-align: center;
+}
+
+/* === NAVIGATION === */
+nav {
+  position: relative;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 1.5rem;
+  padding: 0;
+}
+
+.navigation li a {
+  color: #000000;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navigation li a:hover,
+.navigation li a:focus {
+  background: #390099;
+  color: #fff;
+  outline: none;
+}
+
+/* === MAIN CONTENT === */
+main {
+  max-width: 1200px;
+  height: fit-content;
+  width: 100%;
+  margin: 2rem auto 1.5rem auto;
+  padding: 1.5rem 1rem;
+  background: #ADB5BD;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #39009918;
+  font-family: 'Roboto', sans-serif;
+  gap: 2rem;
+}
+
+/* Center the featured section */
+.featured {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px #39009922;
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.featured>h2:first-child {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  color: #000000;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.featured img {
+  width: 600px;
+  height: 400px;
+  max-width: 100%;
+  display: block;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 12px #39009922;
+  object-fit: cover;
+}
+
+.featured>h2:nth-of-type(2) {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.featured p {
+  font-size: 1.2rem;
+  color: #222;
+  font-weight: 600;
+  margin: 1.2rem 0 0.5rem 0;
+  align-self: flex-start;
+}
+
+.mancake-ingredients-list,
+.mancake-instructions-list {
+  background: #f6f6f6;
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem 1rem 2rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.08rem;
+  color: #222;
+  box-shadow: 0 1px 6px #39009911;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+}
+
+.mancake-ingredients-list li,
+.mancake-instructions-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.mancake-ingredients-list li:last-child,
+.mancake-instructions-list li:last-child {
+  margin-bottom: 0;
+}
+
+.mancake-instructions-list {
+  list-style: decimal inside;
+  padding-left: 2.2rem;
+}
+
+/* Hamburger button style */
+#menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: #000000;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .header-container {
+    padding: 0;
+    margin: 0;
+  }
+
+  .logo {
+    margin: 0 0 0.3rem 1rem;
+    display: flex;
+    justify-self: left;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+    margin: 0.2rem 0 0 0;
+  }
+
+  .header-center h1 {
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
+
+  #menu {
+    display: block;
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+  }
+
+  nav.open {
+    display: block;
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    margin-bottom: 0 !important;
+    background: #FCA311;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0 !important;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  nav.open .navigation {
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+    width: 100%;
+    padding: 0 !important;
+    margin-bottom: 4.5rem !important;
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 2px 8px #39009922;
+  }
+
+  nav.open .navigation li {
+    width: 100%;
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  nav.open .navigation li a {
+    color: #000000;
+    font-size: 1.5rem;
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    border-radius: 0;
+    background: none;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  nav.open .navigation li a:hover,
+  nav.open .navigation li a:focus {
+    background: #390099;
+    color: #fff;
+    outline: none;
+  }
+
+  main {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* === FEATURED RECIPE SECTION === */
+  .featured {
+    padding: 1.2rem 0.5rem;
+  }
+
+  .featured img {
+    width: 100vw;
+    height: auto;
+    max-width: 90vw;
+    aspect-ratio: 3/2;
+    /* 600/400 = 3/2 */
+  }
+
+  .mancake-ingredients-list,
+  .mancake-instructions-list {
+    padding: 1rem 0.7rem 1rem 1.2rem;
+    max-width: 98vw;
+  }
+}
+
+/* === MODAL & SPINNER === */
+/* Modal styles for recipeDetailsData content */
+.recipe-short-modal {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background: rgba(30, 30, 40, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  animation: modal-fade-in 0.3s;
+}
+
+@keyframes modal-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.recipe-short-modal .modal-content {
+  background: #fff;
+  border-radius: 18px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 92vh;
+  overflow-y: auto;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 8px 32px #39009933, 0 1.5px 8px #0001;
+  animation: modal-pop-in 0.25s cubic-bezier(.4, 1.4, .6, 1) both;
+}
+
+@keyframes modal-pop-in {
+  from {
+    transform: scale(0.96) translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.recipe-short-modal .close-modal {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.1rem;
+  background: #FCA311;
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  color: #fff;
+  box-shadow: 0 2px 8px #39009922;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.recipe-short-modal .close-modal:hover,
+.recipe-short-modal .close-modal:focus {
+  background: #390099;
+  color: #fff;
+  outline: none;
+}
+
+.modal-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.7rem;
+  margin-bottom: 0.7rem;
+  text-align: center;
+  color: #390099;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  word-break: break-word;
+}
+
+.modal-img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 12px #39009922;
+  display: block;
+}
+
+.modal-desc {
+  font-size: 1.1rem;
+  color: #222;
+  margin-bottom: 1.1rem;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.modal-section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FCA311;
+  margin: 1.2rem 0 0.5rem 0;
+  text-align: left;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.2px;
+}
+
+.modal-list {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 0.7rem auto;
+  padding-left: 1.2rem;
+  font-size: 1.05rem;
+  color: #222;
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.modal-list li {
+  margin-bottom: 0.4rem;
+}
+
+@media (max-width: 600px) {
+  .recipe-short-modal .modal-content {
+    padding: 1rem 0.3rem;
+    max-width: 99vw;
+    max-height: 95vh;
+    border-radius: 12px;
+  }
+
+  .modal-img {
+    max-width: fit-content;
+    border-radius: 8px;
+  }
+
+  .modal-title {
+    font-size: 1.15rem;
+  }
+
+  .modal-desc,
+  .modal-section-title,
+  .modal-list {
+    max-width: 98vw;
+    font-size: 1rem;
+  }
+
+  .recipe-short-modal .close-modal {
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+/* === LAZY IMAGE FADE-IN === */
+.lazy-fade-img {
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.lazy-fade-img.loaded {
+  opacity: 1;
+}
+
+
+/* === FOOTER === */
+footer {
+  background: #FCA311;
+  color: #000000;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 18px 18px 0 0;
+  margin-top: auto;
+  font-size: 1.3rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+footer a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 600px) {
+
+  header,
+  footer {
+    border-radius: 0;
+    padding: 1rem 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  main {
+    padding: 0.7rem 0.2rem;
+    border-radius: 0;
+  }
+
+  .featured img {
+    width: 100%;
+    max-width: 100vw;
+    border-radius: 6px;
+  }
+
+}
+
+/* === ACCESSIBILITY === */
+nav a:focus,
+.select-bar-list li:focus {
+  outline: 2px solid #390099;
+  outline-offset: 2px;
+}
+
+/* === HEADER FLEX LAYOUT FOR WIDE VIEW === */
+@media (min-width: 901px) {
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+  }
+
+  .logo {
+    flex: 0 0 auto;
+    margin-right: 2.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+  }
+
+  .header-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    z-index: 1;
+  }
+
+  .header-center h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    color: #000000;
+    margin: 0 0 1rem 0;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .header-center nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    position: static;
+    padding-bottom: 1rem;
+  }
+
+  .header-center .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  #menu {
+    display: none !important;
+  }
+}
+
+/* === RANDOM RECIPE BAR === */
+.random-recipe-bar {
+  display: flex;
+  flex-direction: column;
+  /* Stack vertically */
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  /* Space between button and result */
+  margin: 2rem auto 0 auto;
+  width: 100%;
+  max-width: 800px;
+  background: #fff;
+  border-radius: 18px;
+  /* Slightly larger radius */
+  box-shadow: 0 6px 32px #39009922;
+  padding: 2rem 2.5rem;
+  /* More padding for height */
+  font-size: 1.6rem;
+  /* Larger text */
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+
+}
+
+/* Center the random recipe output */
+#recipeOutput {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+/* Make the dice button and recipe output bigger if needed */
+.random-recipe-bar button {
+  font-size: 1.7rem;
+  padding: 0.6rem 2.5rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  /* Prevent shrinking */
+  flex-grow: 0;
+  /* Prevent growing */
+}
+
+/* Center the random recipe link text */
+.random-recipe-link {
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000000;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+  padding: 0.3rem 1.2rem;
+  border-radius: 8px;
+  background: #f6f6f6;
+  box-shadow: 0 2px 8px #39009911;
+  text-align: center;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Hover/focus effect for all random recipe links */
+.random-recipe-link:hover,
+.random-recipe-link:focus {
+  background: #390099;
+  color: #fff;
+  outline: none;
+  box-shadow: 0 4px 16px #39009933;
+}
+
+/* === SPINNER ANIMATION === */
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* === VISUALLY HIDDEN CLASS FOR ACCESSIBILITY === */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

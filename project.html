@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick & Easy Recipes</title>
+  <meta name="description"
+    content="This is a simple recipe website that provides quick and easy recipes for everyday cooking.">
+  <meta name="author" content="Daniel Claudio">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+  </noscript>
+  <link rel="preload" href="styles/project.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="styles/project.css">
+  </noscript>
+  <script src="scripts/project.js" defer></script>
+  <link rel="preload" as="image" href="images/mancake.webp" imagesrcset="images/mancake.webp 600w" imagesizes="600px">
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="images/logo.webp" width="120" alt="Quick & Easy Recipes Logo" loading="lazy">
+      </div>
+      <div class="header-center">
+        <h1>Quick & Easy Recipes</h1>
+        <nav>
+          <ul class="navigation">
+            <li><a href="project.html">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="tips.html">Tips</a></li>
+          </ul>
+        </nav>
+      </div>
+      <button id="menu" aria-label="Open navigation"></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="featured">
+      <h2>"Featured Recipe"</h2>
+      <img src="images/mancake.webp" alt="Featured Recipe Image" width="600" height="400" fetchpriority="high"
+        class="lazy-fade-img">
+      <h3>Mancakes</h3>
+      <p>This mancakes recipe shows that sweet and savory combinations can be delicious when done right. With bacon,
+        cheese, and onions, it’s no surprise these flavors work well together. The chipotle-spiced maple syrup ties
+        everything together for a surprisingly tasty result.</p>
+    </section>
+    <section class="top3Recipes">
+      <h2>Top 3 Recipes</h2>
+      <div class="top3-recipes-grid">
+        <div class="top3-recipe-list">
+          <img src="images/spaghetti-aglio.webp" alt="Spaghetti Aglio e Olio" width="300" height="300" loading="lazy"
+            style="border-radius:8px;display:block;margin:0 auto 1rem auto;">
+          <h3>Spaghetti Aglio e Olio</h3>
+          <p>No two aglio e olio recipes are alike, but this one is pretty true to the classic method. The key is slowly
+            toasting the garlic slices to a perfect golden brown in the olive oil. If it's too light, you don't get the
+            full flavor and if it's too dark it gets bitter. My advice? Do it perfectly.</p>
+        </div>
+        <div class="top3-recipe-list">
+          <img src="images/grilled-cheese.webp" alt="Grilled Cheese Sandwich" width="300" height="300" loading="lazy"
+            style="border-radius:8px;display:block;margin:0 auto 1rem auto;">
+          <h3>Grilled Cheese Sandwich</h3>
+          <p>Learn how to make a grilled cheese sandwich in a nonstick pan with buttered bread and American Cheddar for
+            a
+            classic hot sandwich.</p>
+        </div>
+        <div class="top3-recipe-list">
+          <img src="images/chicken-stir-fry.webp" alt="Chicken Stir Fry" width="300" height="300" loading="lazy"
+            style="border-radius:8px;display:block;margin:0 auto 1rem auto;">
+          <h3>Chicken Stir Fry</h3>
+          <p>This chicken stir fry recipe is packed with veggies and a delicious sweet and savory soy, ginger, and
+            garlic
+            sauce that gets a kick from chili flakes. Serve with white or brown rice for a quick and easy weeknight
+            dinner.</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2 class="visually-hidden">Recipe Selector</h2>
+      <div class="select-bar-section">
+        <button id="openSelectBar" aria-haspopup="listbox" aria-expanded="false">Choose a Recipe</button>
+        <ul id="recipeSelectBar" class="select-bar-list" tabindex="0" role="listbox" style="display:none;"></ul>
+        <div id="selectedRecipeShort" class="selected-recipe-short"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Quick Recipes | Daniel Claudio | Philippines</p>
+    <p>All Rights Reserved</p>
+    <a href="references.html">References</a>
+  </footer>
+</body>
+
+</html>

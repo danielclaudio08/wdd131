@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipes</title>
+  <meta name="description" content="This page showcases a collection of quick and easy recipes for everyday cooking.">
+  <meta name="author" content="Daniel Claudio">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+  </noscript>
+  <link rel="preload" href="styles/recipes.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="styles/recipes.css">
+  </noscript>
+  <script src="scripts/recipes.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="images/logo.webp" width="120" height="120" alt="Quick & Easy Recipes Logo" loading="lazy">
+      </div>
+      <div class="header-center">
+        <h1>Quick & Easy Recipes</h1>
+        <nav>
+          <ul class="navigation">
+            <li><a href="project.html">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="tips.html">Tips</a></li>
+          </ul>
+        </nav>
+      </div>
+      <button id="menu" aria-label="Open navigation"></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="featured">
+      <h2>"Featured Recipe"</h2>
+      <img src="images/mancake.webp" alt="Featured Recipe Image" width="600" height="400" fetchpriority="high"
+        class="lazy-fade-img">
+      <h2>Mancakes</h2>
+      <p>Ingredients</p>
+      <ul class="mancake-ingredients-list">
+        <li>2 pounds bacon, chopped</li>
+        <li>2 cups thinly sliced green onions</li>
+        <li>5 cups all-purpose flour</li>
+        <li>3 cups cornmeal</li>
+        <li>4 tablespoons baking powder</li>
+        <li>1 tablespoon salt</li>
+        <li>4 pinches ground black pepper</li>
+        <li>4 pinches cayenne pepper</li>
+        <li>5 ⅓ cups milk</li>
+        <li>8 ounces sharp Cheddar cheese, grated</li>
+        <li>8 large eggs, beaten</li>
+        <li>8 tablespoons butter, melted</li>
+        <li>4 tablespoons white sugar</li>
+        <li>4 cups warm maple syrup, or to taste</li>
+        <li>½ teaspoon chipotle chile powder, or to taste</li>
+        <li>4 teaspoons vegetable oil</li>
+        <li>4 teaspoons butter</li>
+      </ul>
+      <p>Instructions</p>
+      <ol class="mancake-instructions-list">
+        <li>Gather all ingredients.</li>
+        <li>Cook bacon in a large skillet over medium-high heat, stirring occasionally, until evenly browned, about 10
+          minutes. Off heat, stir green onions into bacon; sauté in hot drippings until slightly softened, 1 to 2
+          minutes. Transfer bacon mixture to a strainer; drain. Reserve drippings.</li>
+        <li>Whisk flour, cornmeal, baking powder, salt, black pepper, and cayenne pepper together in a large bowl; whisk
+          in drained bacon mixture, milk, Cheddar cheese, eggs, melted butter, and sugar until batter is smooth. Let
+          batter rest for 10 minutes.</li>
+        <li>Whisk maple syrup and chipotle chile powder together in a small bowl until chile powder is completely
+          dissolved.</li>
+        <li>Heat 1 teaspoon reserved drippings, 1 teaspoon oil, and 1 teaspoon butter on a griddle over medium-high
+          heat. Drop ¼ cupfuls of batter per mancake onto the griddle; cook until bubbles form and edges are dry, 3 to 4
+          minutes.</li>
+        <li>Flip; cook until browned on other side, 2 to 3 minutes. Repeat with remaining batter.</li>
+        <li>Transfer mancakes to a plate; top with maple syrup.</li>
+      </ol>
+    </section>
+    <section class="random-recipe-bar">
+      <h2 class="visually-hidden">Random Recipe</h2>
+      <button id="loadRecipe" aria-label="Show a random recipe">🎲 Random Recipe</button>
+      <div id="recipeOutput" class="random-recipe-output"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Quick Recipes | Daniel Claudio | Philippines</p>
+    <p>All Rights Reserved</p>
+    <a href="references.html">References</a>
+  </footer>
+</body>
+
+</html>

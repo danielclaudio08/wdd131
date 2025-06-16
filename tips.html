@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tips</title>
+  <meta name="description"
+    content="This page provides quick cooking tips and tricks to help you prepare meals faster and easier.">
+  <meta name="author" content="Daniel Claudio">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+  </noscript>
+  <link rel="preload" href="styles/tips.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="styles/tips.css">
+  </noscript>
+  <script src="scripts/tips.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="images/logo.webp" width="120" height="120" alt="Quick & Easy Recipes Logo" loading="lazy">
+      </div>
+      <div class="header-center">
+        <h1>Quick & Easy Tips</h1>
+        <nav>
+          <ul class="navigation">
+            <li><a href="project.html">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="tips.html">Tips</a></li>
+          </ul>
+        </nav>
+      </div>
+      <button id="menu" aria-label="Open navigation"></button>
+    </div>
+  </header>
+
+  <main>
+    <div class="tips-intro">
+      <h2>Quick & Smart Cooking Tips</h2>
+      <p>Save time and cook better with these simple tips and tricks. Perfect for busy days or when you're short on
+        ingredients!</p>
+    </div>
+
+    <div class="tip-category">
+      <h3>🍽️ Quick Dinner Ideas (Under 30 Minutes)</h3>
+      <ul>
+        <li>One-pot pasta with garlic and veggies</li>
+        <li>Stir-fried chicken and broccoli over rice</li>
+        <li>Grilled cheese and tomato soup</li>
+        <li>Quesadillas with beans and cheese</li>
+        <li>Omelet with vegetables and toast</li>
+      </ul>
+    </div>
+
+    <div class="tip-category">
+      <h3>🥗 Healthy Meals When Short on Time</h3>
+      <ul>
+        <li>Use pre-cut or frozen veggies for quick stir-fries</li>
+        <li>Keep canned tuna or beans for fast protein</li>
+        <li>Make smoothie bowls with fruits and oats</li>
+        <li>Whole grain wraps with hummus and greens</li>
+        <li>Cook once, eat twice — save leftovers!</li>
+      </ul>
+    </div>
+
+    <div class="tip-category">
+      <h3>🕒 Time-Saving Cooking Hacks</h3>
+      <ul>
+        <li>Chop ingredients in bulk and store them</li>
+        <li>Use kitchen gadgets like air fryers or pressure cookers</li>
+        <li>Store herbs in olive oil ice cubes</li>
+        <li>Soak grains overnight to reduce cook time</li>
+      </ul>
+    </div>
+
+    <div class="tip-category">
+      <h3>🧂 Pantry Staples to Always Have</h3>
+      <ul>
+        <li>Rice, pasta, canned tomatoes, olive oil</li>
+        <li>Garlic, onions, salt, pepper, chili flakes</li>
+        <li>Canned beans, chickpeas, tuna</li>
+      </ul>
+    </div>
+
+    <div class="tip-category">
+      <h3>📝 Meal Planning Basics</h3>
+      <ul>
+        <li>Plan meals for 3–4 days to avoid stress</li>
+        <li>Use ingredients across multiple meals</li>
+        <li>Make a shopping list to save time and money</li>
+      </ul>
+    </div>
+
+    <!-- Feedback Form Start -->
+    <section class="feedback-section">
+      <h2>💬 Share Your Own Cooking Tip!</h2>
+      <form class="feedback-form" action="#" method="post" autocomplete="off">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" maxlength="40" required>
+
+        <label for="tip">Your Cooking Tip</label>
+        <textarea id="tip" name="tip" rows="4" maxlength="300" required
+          placeholder="Share your best quick tip..."></textarea>
+
+        <label for="email">Email (optional)</label>
+        <input type="email" id="email" name="email" maxlength="60" placeholder="you@email.com">
+        <button type="submit">Submit Tip</button>
+        <div class="reviews"></div>
+      </form>
+    </section>
+    <!-- Feedback Form End -->
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Quick Recipes | Daniel Claudio | Philippines</p>
+    <p>All Rights Reserved</p>
+    <a href="references.html">References</a>
+  </footer>
+</body>
+
+</html>
