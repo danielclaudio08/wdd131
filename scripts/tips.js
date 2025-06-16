@@ -60,7 +60,9 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("reviewCount-ls", reviewCount);
 
       // Show thank you message and update count
-      reviewsDisplay.textContent = `Thank you, ${name ? name : "cook"}! Tips submitted: ${reviewCount}`;
+      reviewsDisplay.textContent = name
+        ? `Thank you, ${name}! Tips submitted: ${reviewCount}`
+        : `Thank you! Tips submitted: ${reviewCount}`;
 
       // Optionally, reset the form
       feedbackForm.reset();

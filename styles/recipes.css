@@ -604,22 +604,17 @@ nav a:focus,
 .random-recipe-bar {
   display: flex;
   flex-direction: column;
-  /* Stack vertically */
   justify-content: center;
   align-items: center;
   gap: 1.2rem;
-  /* Space between button and result */
   margin: 2rem auto 0 auto;
   width: 100%;
   max-width: 800px;
   background: #fff;
   border-radius: 18px;
-  /* Slightly larger radius */
   box-shadow: 0 6px 32px #39009922;
   padding: 2rem 2.5rem;
-  /* More padding for height */
   font-size: 1.6rem;
-  /* Larger text */
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
 
@@ -636,15 +631,13 @@ nav a:focus,
   margin-top: 0.5rem;
 }
 
-/* Make the dice button and recipe output bigger if needed */
 .random-recipe-bar button {
   font-size: 1.7rem;
   padding: 0.6rem 2.5rem;
   white-space: nowrap;
   flex-shrink: 0;
-  /* Prevent shrinking */
   flex-grow: 0;
-  /* Prevent growing */
+
 }
 
 /* Center the random recipe link text */

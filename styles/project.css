@@ -397,51 +397,166 @@ main {
 .recipe-short-modal {
   position: fixed;
   z-index: 2000;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  background: rgba(30, 30, 40, 0.55);
   display: none;
+  /* Show with JS: display: flex */
   align-items: center;
   justify-content: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  animation: modal-fade-in 0.3s;
+}
+
+@keyframes modal-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .recipe-short-modal .modal-content {
   background: #fff;
-  border-radius: 10px;
-  padding: 2rem 1.5rem;
-  max-width: 90vw;
-  max-height: 90vh;
+  border-radius: 18px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 92vh;
   overflow-y: auto;
-  box-shadow: 0 8px 32px rgba(57, 0, 153, 0.18);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
-  text-align: center;
+  box-shadow: 0 8px 32px #39009933, 0 1.5px 8px #0001;
+  animation: modal-pop-in 0.25s cubic-bezier(.4, 1.4, .6, 1) both;
 }
 
+@keyframes modal-pop-in {
+  from {
+    transform: scale(0.96) translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Fixed close button, not overlapping image */
 .recipe-short-modal .close-modal {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
+  position: fixed;
+  top: 2.5rem;
+  right: 2.5rem;
+  background: #FCA311;
   border: none;
+  border-radius: 50%;
   font-size: 2rem;
-  color: #390099;
+  width: 2.5rem;
+  height: 2.5rem;
   cursor: pointer;
+  color: #fff;
+  box-shadow: 0 2px 8px #39009922;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  z-index: 2100;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+.recipe-short-modal .close-modal:hover,
+.recipe-short-modal .close-modal:focus {
+  background: #390099;
+  color: #fff;
+  outline: none;
 }
 
-.spinner {
-  animation: spin 1s linear infinite;
+.recipe-short-modal .modal-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.7rem;
+  margin-bottom: 0.7rem;
+  text-align: center;
+  color: #390099;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  word-break: break-word;
+}
+
+.recipe-short-modal .modal-img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 12px #39009922;
+  display: block;
+}
+
+.recipe-short-modal .modal-desc {
+  font-size: 1.1rem;
+  color: #222;
+  margin-bottom: 1.1rem;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.recipe-short-modal .modal-section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FCA311;
+  margin: 1.2rem 0 0.5rem 0;
+  text-align: left;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.2px;
+}
+
+.recipe-short-modal .modal-list {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 0.7rem auto;
+  padding-left: 1.2rem;
+  font-size: 1.05rem;
+  color: #222;
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.recipe-short-modal .modal-list li {
+  margin-bottom: 0.4rem;
+}
+
+/* Responsive modal for mobile */
+@media (max-width: 700px) {
+  .recipe-short-modal .modal-content {
+    padding: 1rem 0.3rem;
+    max-width: 99vw;
+    max-height: 95vh;
+    border-radius: 12px;
+  }
+
+  .recipe-short-modal .modal-img {
+    max-width: 95vw;
+    border-radius: 8px;
+  }
+
+  .recipe-short-modal .modal-title {
+    font-size: 1.15rem;
+  }
+
+  .recipe-short-modal .close-modal {
+    top: 0.7rem;
+    right: 0.7rem;
+    font-size: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 /* === LAZY IMAGE FADE-IN === */

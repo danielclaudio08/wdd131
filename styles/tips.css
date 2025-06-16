@@ -83,7 +83,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  /* Adjust as needed */
 }
 
 /* Tips Intro Section */
@@ -159,7 +158,6 @@ main {
   margin-left: auto;
   margin-right: auto;
   min-height: 180px;
-  /* Adjust based on your typical content */
 }
 
 .tip-category h3 {
@@ -395,7 +393,6 @@ main {
 
   .tip-category {
     min-height: 180px;
-    /* Reserve space for each tip block */
     padding: 1rem 0.5rem;
     box-sizing: border-box;
     width: 100%;
