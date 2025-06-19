@@ -396,11 +396,10 @@ main {
 /* === MODAL & SPINNER === */
 .recipe-short-modal {
   position: fixed;
-  z-index: 2000;
+  z-index: 1000;
   inset: 0;
   background: rgba(30, 30, 40, 0.55);
-  display: none;
-  /* Show with JS: display: flex */
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 1.5rem;
@@ -730,4 +729,14 @@ nav a:focus,
   #menu {
     display: none !important;
   }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
 }
